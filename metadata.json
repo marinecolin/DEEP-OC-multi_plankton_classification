@@ -1,0 +1,37 @@
+{
+    "title": "multi_plankton_classification",
+    "summary": "return if the image is multi plankton or not",
+    "description": [
+        "multi_plankton_classification is an application using the DEEPaaS API.\n",
+        "Write additional information for your users (how to predict, how to retrain,",
+        "dataset description, training description, etc)."
+    ],
+    "keywords": [
+        "docker",
+        "api-v2"
+    ],
+    "license": "MIT",
+    "date_creation": "2024-07-05",
+    "sources": {
+		"dockerfile_repo": "https://github.com/marinecolin/DEEP-OC-multi_plankton_classification",
+		"docker_registry_repo": "deephdc/uc-marinecolin-deep-oc-multi_plankton_classification",
+		"code": "https://github.com/marinecolin/multi_plankton_classification"
+	},
+    "continuous_integration": {
+        "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/UC-marinecolin-DEEP-OC-multi_plankton_classification/master",
+        "build_status_url": "https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/UC-marinecolin-DEEP-OC-multi_plankton_classification/job/master"
+    },
+    "tosca": [
+        {
+            "title": "Mesos (CPU)",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-marathon-webdav.yml",
+            "inputs": [
+                "rclone_conf",
+                "rclone_url",
+                "rclone_vendor",
+                "rclone_user",
+                "rclone_pass"
+            ]
+        }
+    ]
+}
